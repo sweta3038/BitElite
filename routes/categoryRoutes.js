@@ -5,6 +5,7 @@ import {
   categoryPhotoController,
   createCategoryController,
   deleteCategoryCOntroller,
+  getCategoryById,
   singleCategoryController,
   updateCategoryController,
 } from "./../controllers/categoryController.js";
@@ -23,6 +24,9 @@ router.post(
   formidable(),
   createCategoryController
 );
+
+//get category by id
+router.get('/get-category/:id', getCategoryById);
 
 //update category
 router.put(

@@ -14,7 +14,7 @@ const Products = () => {
       setProducts(data.products);
     } catch (error) {
       console.log(error);
-      toast.error("Someething Went Wrong");
+      toast.error("Something Went Wrong");
     }
   };
 
@@ -24,7 +24,7 @@ const Products = () => {
   }, []);
   return (
     <Layout>
-      <div className="row">
+      <div className="row mt-5">
         <div className="col-md-3">
           <AdminMenu />
         </div>

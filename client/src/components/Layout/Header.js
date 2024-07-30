@@ -22,7 +22,7 @@ const Header = () => {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary" style={{ height: "100px" }}>
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -37,7 +37,8 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link to="/" className="navbar-brand">
-              🛒 Myntra
+            <img src="/images/MyntraLogo.jpeg" alt="Myntra Logo" style={{ height: "70px", marginLeft: "35px" }} />
+              MYNTRA
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <SearchInput />

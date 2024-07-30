@@ -122,6 +122,34 @@ export const categoryControlller = async (req, res) => {
   }
 };
 
+//get category by Id
+export const getCategoryById = async (req, res) => {
+  try {
+    const categoryId = req.params.id;
+
+    // Fetch category from the database
+    const category = await categoryModel.findById(categoryId);
+
+    if (!category) {
+      return res.status(404).json({
+        success: false,
+        message: 'Category not found',
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      category,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      message: 'Server error',
+    });
+  }
+};
+
 // single category
 export const singleCategoryController = async (req, res) => {
   try {
